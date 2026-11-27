@@ -1,0 +1,160 @@
+:root {
+  --bg: #fdfdfc;
+  --fg: #1a1a18;
+  --muted: #6b6b64;
+  --rule: #e4e4de;
+  --accent: #a2500f;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #131312;
+    --fg: #e8e8e4;
+    --muted: #9a9a92;
+    --rule: #2b2b28;
+    --accent: #e3a35f;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0 auto;
+  padding: 4rem 1.5rem 3rem;
+  max-width: 44rem;
+  background: var(--bg);
+  color: var(--fg);
+  font: 400 1rem/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+  transition: border-color 120ms ease, color 120ms ease;
+}
+
+a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+  font-size: 0.9em;
+  color: var(--muted);
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  margin: 0 0 1rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+header {
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.tagline {
+  margin: 0.9rem 0 0;
+  font-size: 1.06rem;
+  max-width: 34rem;
+}
+
+.where {
+  margin: 0.6rem 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+header nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-top: 1.6rem;
+  font-size: 0.92rem;
+}
+
+section {
+  padding: 2.5rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+section:last-of-type {
+  border-bottom: 0;
+}
+
+.projects {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.projects li {
+  margin-bottom: 1.4rem;
+}
+
+.projects li:last-child {
+  margin-bottom: 0;
+}
+
+.projects a {
+  font-weight: 550;
+  border-bottom-color: transparent;
+}
+
+.projects p {
+  margin: 0.15rem 0 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
+.more {
+  margin: 1.8rem 0 0;
+  font-size: 0.92rem;
+}
+
+footer {
+  margin-top: 3rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+@media (max-width: 34rem) {
+  body {
+    padding: 2.5rem 1.25rem 2rem;
+  }
+
+  h1 {
+    font-size: 1.7rem;
+  }
+}
